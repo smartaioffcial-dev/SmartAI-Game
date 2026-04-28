@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAI Game Interface</title>
+    <style>
+        /* Thiết lập cơ bản để xóa lề và đặt phông chữ */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00008B; /* Màu xanh đậm nền (DarkBlue) */
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; /* Phông chữ đậm cho giống hình */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
 
+        /* Container chính để chứa tất cả các phần tử, giữ bố cục dọc */
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px; /* Giới hạn chiều rộng tối đa */
+        }
+
+        /* Tiêu đề "SmartGame" */
+        #game-title {
+            font-size: 3rem; /* Kích thước chữ lớn */
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        /* Màu cho từng phần của chữ SmartGame */
+        #title-smart { color: #00E5FF; } /* Màu xanh da trời (Cyan) */
+        #title-game { color: #FF4500; }  /* Màu đỏ cam (OrangeRed) */
+
+        /* Vòng tròn logo AI */
+        #ai-logo {
+            background-color: #1A2AC2; /* Màu xanh nền vòng tròn */
+            border-radius: 50%; /* Làm cho vòng tròn hoàn hảo */
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            color: white; /* Chữ AI màu trắng */
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        /* Bảng menu màu tím nhẹ */
+        #menu-panel {
+            background-color: #9370DB; /* Màu tím nhẹ (MediumPurple) */
+            border-radius: 20px; /* Góc bo tròn */
+            padding: 20px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative; /* Để định vị chữ iBETA */
+        }
+
+        /* Nút PLAY chính */
+        #play-button {
+            font-size: 4rem;
+            color: #FF4500; /* Màu đỏ cam cho chữ PLAY */
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Dòng kẻ gạch chân dưới PLAY */
+        #play-underline {
+            background-color: #0000CD; /* Màu xanh đậm (MediumBlue) */
+            height: 8px; /* Độ dày của dòng kẻ */
+            width: 90%; /* Chiều rộng của dòng kẻ */
+            margin-top: -10px; /* Đưa dòng kẻ sát lên chữ PLAY */
+            margin-bottom: 15px;
+        }
+
+        /* Container cho các nút nhỏ bên dưới (Shop, Settings) */
+        #sub-menu {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+
+        /* Màu cho các nút nhỏ */
+        #shop-button { color: #FF8C00; } /* Màu cam cho chữ Shop */
+        #settings-button { color: #FFFFE0; } /* Màu vàng nhạt cho chữ Settings */
+
+        /* Chữ iBETA */
+        #ibeta-text {
+            font-size: 1rem;
+            font-family: 'Arial', sans-serif; /* Phông chữ thường hơn cho iBETA */
+            color: white;
+            position: absolute; /* Định vị tuyệt đối */
+            right: 20px; /* Cách lề phải */
+            bottom: 30px; /* Cách lề dưới */
+        }
+
+        /* Dòng chữ phiên bản ở dưới cùng */
+        #version-text {
+            color: #1A2AC2; /* Màu xanh đậm cho chữ phiên bản */
+            font-size: 1.2rem;
+            font-weight: normal; /* Không đậm */
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <h1 id="game-title"><span id="title-smart">Smart</span><span id="title-game">Game</span></h1>
+
+        <div id="ai-logo">AI</div>
+
+        <div id="menu-panel">
+            <h2 id="play-button">PLAY</h2>
+            <div id="play-underline"></div> <div id="sub-menu">
+                <span id="shop-button">Shop</span>
+                <span id="settings-button">Settings</span>
+            </div>
+            
+            <span id="ibeta-text">ⓘ BETA</span>
+        </div>
+
+        <p id="version-text">SMART_AI (Version smrt.1.beta)</p>
+    </div>
+
+</body>
+</html>
